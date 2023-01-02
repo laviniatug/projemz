@@ -94,7 +94,7 @@ class _ogretmenekleState extends State<ogretmenekle> {
                   controller: adkontrol,
                   validator: (value) {
                     if (value == null || value.isEmpty) {
-                      return 'Please Enter Email';
+                      return 'lütfen adınızı giriniz';
                     }
                     return null;
                   },
@@ -115,7 +115,7 @@ class _ogretmenekleState extends State<ogretmenekle> {
                   controller: derskontrol,
                   validator: (value) {
                     if (value == null || value.isEmpty) {
-                      return 'Please Enter Password';
+                      return 'dersinizi giriniz';
                     }
                     return null;
                   },
