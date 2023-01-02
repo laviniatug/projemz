@@ -16,14 +16,14 @@ class _AddStudentPageState extends State<AddStudentPage> {
   var password = "";
   // Create a text controller and use it to retrieve the current value
   // of the TextField.
-  final nameController = TextEditingController();
+  final nameController = TextEditingController();            //kontol alanı burada böyle değişken tanımlayıp ileride kullanacağız
   final emailController = TextEditingController();
   final passwordController = TextEditingController();
 
   @override
   void dispose() {
     // Clean up the controller when the widget is disposed.
-    nameController.dispose();
+    nameController.dispose();       //kontrolu temizler
     emailController.dispose();
     passwordController.dispose();
     super.dispose();
