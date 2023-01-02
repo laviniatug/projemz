@@ -12,9 +12,9 @@ class ogretmenguncelle extends StatefulWidget {
 class _ogretmenguncelleState extends State<ogretmenguncelle> {
   final _formKey = GlobalKey<FormState>();
 
-  //öğretmen güncelle
+  //öğretmen güncelle 
   CollectionReference Ogretmen =
-  FirebaseFirestore.instance.collection('ogretmen');
+  FirebaseFirestore.instance.collection('ogretmen');    //ogretmen adında data açıldı burada referans aldı
 
   Future<void> updateUser(id, ogr_unvani, ogr_adi, girdigidersler) {
     return Ogretmen
