@@ -13,7 +13,7 @@ class ogretmenlistele extends StatefulWidget {
 
 class _ogretmenlisteleState extends State<ogretmenlistele> {
   final Stream<QuerySnapshot> OgretmenStream =
-  FirebaseFirestore.instance.collection('öğretmen').snapshots();
+  FirebaseFirestore.instance.collection('öğretmen').snapshots();    //firebase açtı ve öğretmen adından data oluşturdu
 
   // For Deleting User
   CollectionReference Ogretmen =
@@ -42,7 +42,7 @@ class _ogretmenlisteleState extends State<ogretmenlistele> {
             );
           }
 
-          final List storedocs = [];
+          final List storedocs = [];   //datayı çağırdı
           snapshot.data!.docs.map((DocumentSnapshot document) {
             Map a = document.data() as Map<String, dynamic>;
             storedocs.add(a);
