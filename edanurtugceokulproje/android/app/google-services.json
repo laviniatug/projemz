@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "865512386429",
+    "project_id": "edanurtugceprojeodevi",
+    "storage_bucket": "edanurtugceprojeodevi.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:865512386429:android:05925147a2453f925d2614",
+        "android_client_info": {
+          "package_name": "com.edanurtugce.edanurtugceokulproje"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "865512386429-dvsp224idkcn5rkjlrcmc9or645bc1sg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA76M_BxSoH58mc4kNmRNvEVkNn3q3SFDQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "865512386429-dvsp224idkcn5rkjlrcmc9or645bc1sg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
