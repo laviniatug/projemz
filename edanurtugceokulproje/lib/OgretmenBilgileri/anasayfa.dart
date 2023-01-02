@@ -1,6 +1,6 @@
 import 'package:edanurtugceokulproje/dersbilgileri/derslisteleme.dart';
 import 'package:edanurtugceokulproje/dersbilgileri/derslisteleme.dart';
-import 'package:edanurtugceokulproje/OgretmenBilgileri/ogretmenekle.dart';
+import 'package:edanurtugceokulproje/OgretmenBilgileri/ogretmenekle.dart';   //sayfalar arası bağlantı yapar
 import 'package:flutter/material.dart';
 
 
@@ -35,7 +35,7 @@ class _HomePage2State extends State<HomePage2> {
           ],
         ),
       ),
-      body: ListStudentPage(),
+      body: ListStudentPage(),     //listeleme alanına gider
     );
   }
 }
