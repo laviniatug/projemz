@@ -14,16 +14,16 @@ class _AddStudentPageState extends State<AddStudentPage> {
   var name = "";
   var email = "";
   var password = "";
-  // Create a text controller and use it to retrieve the current value
-  // of the TextField.
-  final nameController = TextEditingController();            //kontol alanı burada böyle değişken tanımlayıp ileride kullanacağız
+  
+  //bir metin derleyicisi oluşturur ve onu geçerli değeri almak için kullannılır yani name controller gibi isimle diğer yerlerden de çağırabiliriz
+  final nameController = TextEditingController();            
   final emailController = TextEditingController();
   final passwordController = TextEditingController();
 
   @override
   void dispose() {
-    // Clean up the controller when the widget is disposed.
-    nameController.dispose();       //kontrolu temizler
+    // Widget elden çıkarıldığında denetleyiciyi temizlenir
+    nameController.dispose();      r
     emailController.dispose();
     passwordController.dispose();
     super.dispose();
@@ -35,22 +35,22 @@ class _AddStudentPageState extends State<AddStudentPage> {
     passwordController.clear();
   }
 
-  // Adding Student
+  //firebasede gözüken ekrana ekleme yapıyor
   CollectionReference students =
-  FirebaseFirestore.instance.collection('students');
+  FirebaseFirestore.instance.collection('ders');
 
   Future<void> addUser() {
     return students
         .add({'kod': name, 'ders adı': email, 'ders saati': password})
-        .then((value) => print('User Added'))
-        .catchError((error) => print('Failed to Add user: $error'));
+        .then((value) => print('ders eklendi'))
+        .catchError((error) => print('ders eklenemedi: $error'));
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Add New Student"),
+        title: Text("yeni ekle"),
       ),
       body: Form(
         key: _formKey,
@@ -72,7 +72,7 @@ class _AddStudentPageState extends State<AddStudentPage> {
                   controller: nameController,
                   validator: (value) {
                     if (value == null || value.isEmpty) {
-                      return 'Please Enter Name';
+                      return 'lütfen kodu giriniz';
                     }
                     return null;
                   },
@@ -92,7 +92,7 @@ class _AddStudentPageState extends State<AddStudentPage> {
                   controller: emailController,
                   validator: (value) {
                     if (value == null || value.isEmpty) {
-                      return 'Please Enter Email';
+                      return 'lütfen dersi giriniz';
                     }
                     return null;
                   },
@@ -113,7 +113,7 @@ class _AddStudentPageState extends State<AddStudentPage> {
                   controller: passwordController,
                   validator: (value) {
                     if (value == null || value.isEmpty) {
-                      return 'Please Enter Password';
+                      return 'lütfen ders saatini giriniz';
                     }
                     return null;
                   },
@@ -125,7 +125,7 @@ class _AddStudentPageState extends State<AddStudentPage> {
                   children: [
                     ElevatedButton(
                       onPressed: () {
-                        // Validate returns true if the form is valid, otherwise false.
+                     // Doğrula, form geçerliyse doğru, değilse yanlış döndürür.
                         if (_formKey.currentState!.validate()) {
                           setState(() {
                             name = nameController.text;
