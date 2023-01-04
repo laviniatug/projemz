@@ -137,14 +137,14 @@ class _AddStudentPageState extends State<AddStudentPage> {
                         }
                       },
                       child: Text(
-                        'Register',
+                        'kayıt ol',
                         style: TextStyle(fontSize: 18.0),
                       ),
                     ),
                     ElevatedButton(
                       onPressed: () => {clearText()},
                       child: Text(
-                        'Reset',
+                        'sıfırla',
                         style: TextStyle(fontSize: 18.0),
                       ),
                       style: ElevatedButton.styleFrom(backgroundColor: Colors.blueGrey),
