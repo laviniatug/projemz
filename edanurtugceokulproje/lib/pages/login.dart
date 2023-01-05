@@ -1,6 +1,6 @@
 import 'package:edanurtugceokulproje/service/auth_service.dart';
 import 'package:edanurtugceokulproje/pages/register.dart';
-import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';     //diğer sayfaya geçiş için kullanılır
 import 'package:edanurtugceokulproje/ogretmen_kontrol.dart';
 
 class LoginPage extends StatefulWidget {
