@@ -106,7 +106,7 @@ class _LoginPageState extends State<LoginPage> {
                             return Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => secimyeri()));
+                                    builder: (context) => secimyeri()));   //yönlendirici
                           });
                         },
                         child: Container(
